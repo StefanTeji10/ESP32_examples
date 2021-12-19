@@ -1,0 +1,20 @@
+FreeRtos interaction between w or more tasks
+
+1. I want to communicate directly to another task. I care about counting or sending simple data.
+1. solution --> To solve this type of communication you can use Task Notification
+
+2. Someone needs to block or unblock a task. I don't care who.
+2. solution --> In this case we can use Semaphore
+
+3. Only the task that blocks an another task can unblock it. 
+3. solution --> Mutex. This is similar to semaphore but have restriction...
+Mutexes are basically there so that if something is got a precious resource 
+then nobody else can interact with that resource until that Mutex is completed.
+
+4. Task needs to pass data from one task to another. Any type of data.
+4. Solution --> Queue.
+
+5. You need multiple things to happen before I unblock a task.
+Example, I need to be connected to the internet, I also need to have read the temperature. I also need to have IP address, or ... 
+5. Solution --> Event group
+

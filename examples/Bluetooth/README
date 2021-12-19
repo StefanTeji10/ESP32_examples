@@ -1,0 +1,20 @@
+We have two different Bluetooth API's with the ESP-IDF
+
+Feature                 *   Bluedroid   *   Nimble
+Bluetooth Classic       *   yes         *   no
+BLE                     *   yes         *   yes
+Smaller footpirnt       *   no          *   yes
+Smaller memory runtime  *   no          *   yes
+Simpler code            *   no          *   yes
+
+Bluedroid is used for: 
+1. Audio Streaming
+2. Existing Bluetooth devices (HID)
+3. Serial UART
+
+Nimble is used for:
+1. sensors
+2. Actuators
+3. HID
+4. Serial UART
+
